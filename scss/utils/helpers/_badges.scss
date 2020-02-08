@@ -1,0 +1,28 @@
+.bmi {
+  &::before{
+    content: 'BMI';
+    font-size: .75rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+}
+
+.weight {
+  &::before{
+    content: 'weight';
+    font-size: .75rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+}
+
+.height {
+  &::before{
+    content: 'height';
+    font-size: .75rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+}
+
+
