@@ -1,3 +1,23 @@
+@mixin resetButton {
+  background-image: url(/images/icons_loop.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  bottom: 0;
+  right: -2px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+@mixin recordBar_alert {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.4375rem;
+}
+
 .wrap {
   max-width: 1024px;
   margin: 0 auto;
@@ -10,20 +30,99 @@
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
 }
-.banner {
-  min-height: 18.76rem;
+.cotainer {
   display: flex;
+  min-height: 18.75rem;
   justify-content: center;
   align-items: center;
   background-color: map-get($theme-colors, secondary);
-  &__content {
-    margin-left: 6.0625rem;
-    margin-right: 3.3125rem;
-  }
+}
+.logo {
+  flex: 0.8;
+  text-align: right;
+}
+.userKeyin {
+  padding-left: 6.0625rem;
+  padding-right: 3.3125rem;
+}
+.result {
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 .circle {
   border-radius: 50%;
-  padding: 3rem 1.46rem;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #ffd366;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+  }
+  &:active {
+    background: #dea821;
+  }
+  &--alert {
+    background-color: transparent;
+    &:active {
+      background: transparent;
+    }
+    .resetButton {
+      @include resetButton();
+      border: 4px solid map-get($theme-colors, secondary);
+    }
+  }
+}
+$alertColor: (
+  1: #31baf9,
+  2: #86d73f,
+  3: #ff982d,
+  4: #ff6c03,
+  5: #ff1200
+);
+
+@each $name, $value in $alertColor {
+  .alert--#{$name} {
+    .circle {
+      border: 6px solid $value;
+      color: $value;
+      background-color: transparent;
+      position: relative;
+      margin-right: 1rem;
+      cursor: auto;
+      &:active {
+        background: transparent;
+      }
+    }
+    .valuebox {
+      margin-top: 1rem;
+      text-align: center;
+      & > p {
+        font-size: 2rem;
+        margin-bottom: 0.25rem;
+      }
+      & > p:last-child {
+        font-size: 0.875rem;
+        margin: 0;
+      }
+    }
+    .resetButton {
+      background-color: $value;
+      @include resetButton();
+      border: 4px solid map-get($theme-colors, secondary);
+    }
+    .resetButton:active {
+      box-shadow: 0 1px 6px 3px $value;
+    }
+    .resultText {
+      font-size: 2rem;
+      color: $value;
+    }
+  }
 }
 
 .recordBar {
@@ -38,57 +137,43 @@
   &__item {
     flex: 1;
   }
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
   &--alert-1::before {
     content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 0.4375rem;
-    background: #86d73f;
-    box-shadow: 2px 0 3px 0 rgba(134, 215, 63, 0.29);
+    @include recordBar_alert();
+    background: #31baf9;
+    box-shadow: 2px 0 3px 0 rgba(49, 186, 249, 0.29);
   }
   &--alert-2::before {
     content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 0.4375rem;
-    background: #31BAF9;
-    box-shadow: 2px 0 3px 0 rgba(49,186,249,0.29);
+    @include recordBar_alert();
+    background: #86d73f;
+    box-shadow: 2px 0 3px 0 rgba(134, 215, 63, 0.29);
   }
   &--alert-3::before {
     content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 0.4375rem;
-    background: #FF982D;
-    box-shadow: 2px 0 3px 0 rgba(255,152,45,0.29);
+    @include recordBar_alert();
+    background: #ff982d;
+    box-shadow: 2px 0 3px 0 rgba(255, 152, 45, 0.29);
   }
   &--alert-4::before {
     content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 0.4375rem;
-    background: #FF6C03;
-    box-shadow: 2px 0 3px 0 rgba(255,108,3,0.29);
+    @include recordBar_alert();
+    background: #ff6c03;
+    box-shadow: 2px 0 3px 0 rgba(255, 108, 3, 0.29);
   }
   &--alert-5::before {
     content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 0.4375rem;
+    @include recordBar_alert();
     background: #ff1200;
     box-shadow: 2px 0 3px 0 rgba(255, 18, 0, 0.29);
   }
+}
+.del{
+  color: #fc4e41;
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
 }

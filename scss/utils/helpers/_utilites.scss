@@ -1,5 +1,5 @@
 $theme-colors: (
-  primary: #FFD366,
+  primary: #ffd366,
   secondary: #424242,
   light: #f8f9fa,
   white: #fff
@@ -15,8 +15,8 @@ $theme-colors: (
 }
 
 $spacing: (
-  1: .4375rem,
-  2: .75rem,
+  1: 0.4375rem,
+  2: 0.75rem,
   3: 1.125rem,
   4: 1.3125rem,
   5: 2.25rem,
@@ -72,7 +72,7 @@ $spacing: (
   margin-left: auto;
   margin-right: auto;
 }
-.h-text{
+.h-text {
   &-center {
     text-align: center;
   }
@@ -82,5 +82,9 @@ $spacing: (
   &-right {
     text-align: right;
   }
+}
+
+.h-d-none {
+  display: none !important;
 }
 
