@@ -6,6 +6,44 @@ var list = document.querySelector('#list');
 var del = document.querySelector('#del');
 var data = JSON.parse(localStorage.getItem('listData')) || [];
 
+
+// event init
+listHtml(data);
+
+// event
+countId.addEventListener('click', eventDate, false);
+del.addEventListener('click', delallData, false);
+
+function eventDate(e) {
+    if (e.target.id === 'resultValue') {
+        e.preventDefault();
+        var w = weightId.value;
+        var h = heightId.value;
+        if (w == '' && h == '') {
+            alert('請輸入數值哦 ( ˘•ω•˘ ).oOஇ')
+            return
+        };
+        bmiCount(w, h);
+        bmiLevel(bmi);
+        upDateArray(w, h, bmi, level);
+        resultHtml();
+        listHtml(data);
+    }
+    else if (e.target.id === 'resetValue') {
+        resetHtml();
+        // localStorage.setItem('listData', JSON.stringify(data));
+        // listHtml(data);
+    }
+}
+
+function delallData(e) {
+    e.preventDefault();
+    data = [];
+    localStorage.setItem('listData', JSON.stringify(data));
+    del.classList.add('h-d-none');
+    listHtml(data);
+}
+
 // Model
 function bmiCount(weight, height) {
     height = height / 100;
@@ -145,40 +183,4 @@ function listHtml(listData) {
     if (dataLength !== 0) { del.classList.remove('h-d-none') }
     list.innerHTML = listHtml;
 }
-// init
-listHtml(data);
 
-// event
-function eventDate(e) {
-    if (e.target.id === 'resultValue') {
-        e.preventDefault();
-        var w = weightId.value;
-        var h = heightId.value;
-        if (w == '' && h == '') {
-            alert('請輸入數值哦 ( ˘•ω•˘ ).oOஇ')
-            return
-        };
-        bmiCount(w, h);
-        bmiLevel(bmi);
-        upDateArray(w, h, bmi, level);
-        resultHtml();
-        listHtml(data);
-    }
-    else if (e.target.id === 'resetValue') {
-        resetHtml();
-        // localStorage.setItem('listData', JSON.stringify(data));
-        // listHtml(data);
-    }
-}
-
-function delallData(e) {
-    e.preventDefault();
-    data = [];
-    localStorage.setItem('listData', JSON.stringify(data));
-    del.classList.add('h-d-none');
-    listHtml(data);
-}
-
-//監聽
-countId.addEventListener('click', eventDate, false);
-del.addEventListener('click', delallData, false);
