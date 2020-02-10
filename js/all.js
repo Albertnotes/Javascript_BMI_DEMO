@@ -118,6 +118,7 @@ function resetHtml() {
 function listHtml(listData) {
     var dataLength = listData.length;
     var listHtml = '';
+    var today = new Date();
     for (var i = 0; i < dataLength; i++) {
         if (data[i].level === '理想') {
             listHtml += `
@@ -126,6 +127,9 @@ function listHtml(listData) {
                 <span class="recordBar__item h3 bmi">`+ data[i].bmi + `</span>
                 <span class="recordBar__item h3 weight">`+ data[i].weight + `</span>
                 <span class="recordBar__item h3 height">`+ data[i].height + `</span>
+                <span class="recordBar__item h6">`
+                +(today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear()+
+                `</span>
             </div>
             `;
         }
@@ -136,6 +140,9 @@ function listHtml(listData) {
                 <span class="recordBar__item h3 bmi">`+ data[i].bmi + `</span>
                 <span class="recordBar__item h3 weight">`+ data[i].weight + `</span>
                 <span class="recordBar__item h3 height">`+ data[i].height + `</span>
+                <span class="recordBar__item h6">`
+                +(today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear()+
+                `</span>
             </div>
             `;
         }
@@ -146,6 +153,9 @@ function listHtml(listData) {
                 <span class="recordBar__item h3 bmi">`+ data[i].bmi + `</span>
                 <span class="recordBar__item h3 weight">`+ data[i].weight + `</span>
                 <span class="recordBar__item h3 height">`+ data[i].height + `</span>
+                <span class="recordBar__item h6">`
+                +(today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear()+
+                `</span>
             </div>
             `;
         }
@@ -156,6 +166,9 @@ function listHtml(listData) {
                 <span class="recordBar__item h3 bmi">`+ data[i].bmi + `</span>
                 <span class="recordBar__item h3 weight">`+ data[i].weight + `</span>
                 <span class="recordBar__item h3 height">`+ data[i].height + `</span>
+                <span class="recordBar__item h6">`
+                +(today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear()+
+                `</span>
             </div>
             `;
         }
@@ -166,6 +179,9 @@ function listHtml(listData) {
                 <span class="recordBar__item h3 bmi">`+ data[i].bmi + `</span>
                 <span class="recordBar__item h3 weight">`+ data[i].weight + `</span>
                 <span class="recordBar__item h3 height">`+ data[i].height + `</span>
+                <span class="recordBar__item h6">`
+                +(today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear()+
+                `</span>
             </div>
             `;
         }
@@ -176,6 +192,9 @@ function listHtml(listData) {
                 <span class="recordBar__item h3 bmi">`+ data[i].bmi + `</span>
                 <span class="recordBar__item h3 weight">`+ data[i].weight + `</span>
                 <span class="recordBar__item h3 height">`+ data[i].height + `</span>
+                <span class="recordBar__item h6">`
+                +(today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear()+
+                `</span>
             </div>
             `;
         }
