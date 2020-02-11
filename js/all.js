@@ -17,9 +17,10 @@ del.addEventListener('click', delallData, false);
 function eventDate(e) {
     if (e.target.id === 'resultValue') {
         e.preventDefault();
-        var w = weightId.value;
-        var h = heightId.value;
-        if (w == '' && h == '') {
+        var w = parseInt(weightId.value);
+        var h = parseInt(heightId.value);
+        console.log(w)
+        if (isNaN(w) || isNaN(h)) {
             alert('請輸入數值哦 ( ˘•ω•˘ ).oOஇ')
             return
         };
