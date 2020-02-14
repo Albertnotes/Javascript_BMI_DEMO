@@ -847,7 +847,7 @@ img {
 }
 
 .circle--alert .resetButton {
-  background-image: url("/images/icons_loop.png");
+  background-image: url("../../images/icons_loop.png");
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
@@ -889,7 +889,7 @@ img {
 
 .alert--1 .resetButton {
   background-color: #31baf9;
-  background-image: url("/images/icons_loop.png");
+  background-image: url("../../images/icons_loop.png");
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
@@ -941,7 +941,7 @@ img {
 
 .alert--2 .resetButton {
   background-color: #86d73f;
-  background-image: url("/images/icons_loop.png");
+  background-image: url("../../images/icons_loop.png");
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
@@ -993,7 +993,7 @@ img {
 
 .alert--3 .resetButton {
   background-color: #ff982d;
-  background-image: url("/images/icons_loop.png");
+  background-image: url("../../images/icons_loop.png");
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
@@ -1045,7 +1045,7 @@ img {
 
 .alert--4 .resetButton {
   background-color: #ff6c03;
-  background-image: url("/images/icons_loop.png");
+  background-image: url("../../images/icons_loop.png");
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
@@ -1097,7 +1097,7 @@ img {
 
 .alert--5 .resetButton {
   background-color: #ff1200;
-  background-image: url("/images/icons_loop.png");
+  background-image: url("../../images/icons_loop.png");
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
