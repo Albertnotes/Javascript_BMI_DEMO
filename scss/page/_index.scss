@@ -140,38 +140,38 @@ $alertColor: (
   &:last-child {
     margin-bottom: 0;
   }
-  &--alert-1::before {
-    content: "";
+  &.alert--1::before {
+    content: '';
     @include recordBar_alert();
     background: #31baf9;
     box-shadow: 2px 0 3px 0 rgba(49, 186, 249, 0.29);
   }
-  &--alert-2::before {
-    content: "";
+  &.alert--2::before {
+    content: '';
     @include recordBar_alert();
     background: #86d73f;
     box-shadow: 2px 0 3px 0 rgba(134, 215, 63, 0.29);
   }
-  &--alert-3::before {
-    content: "";
+  &.alert--3::before {
+    content: '';
     @include recordBar_alert();
     background: #ff982d;
     box-shadow: 2px 0 3px 0 rgba(255, 152, 45, 0.29);
   }
-  &--alert-4::before {
-    content: "";
+  &.alert--4::before {
+    content: '';
     @include recordBar_alert();
     background: #ff6c03;
     box-shadow: 2px 0 3px 0 rgba(255, 108, 3, 0.29);
   }
-  &--alert-5::before {
-    content: "";
+  &.alert--5::before {
+    content: '';
     @include recordBar_alert();
     background: #ff1200;
     box-shadow: 2px 0 3px 0 rgba(255, 18, 0, 0.29);
   }
 }
-.del{
+.del {
   color: #fc4e41;
   display: block;
   text-align: center;
