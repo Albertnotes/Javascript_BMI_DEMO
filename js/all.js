@@ -77,10 +77,10 @@ function resultHtml(bmi) {
     let result = `
     <div class="circle">
         <a href="#" class="resetButton" id="resetValue"></a>
-            <div class="valuebox">
-                <p class="circleValue">${bmi}</p>
-                <p class="circleValue">BMI</p>
-            </div>
+        <div class="valuebox">
+            <p class="circleValue">${bmi}</p>
+            <p class="circleValue">BMI</p>
+        </div>
     </div>
     <p class="resultText">${bmiLevelClass[str].message}</p>`;
     countId.classList.add(bmiLevelClass[str].class);
