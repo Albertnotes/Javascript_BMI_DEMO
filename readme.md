@@ -13,5 +13,9 @@ https://albertnotes.github.io/Javascript_BMI_DEMO/
   - `27 <= BMI < 30` 輕度肥胖
   - `30 <= BMI < 35` 中度肥胖
   - `BMI >= 35` 重度肥胖
-- 支援本地端網頁儲存 localStorage
+- 支援本地端網頁儲存
 - 支援單一刪除、全部刪除
+
+## 使用技術
+-  JavaScript ES6
+-  localStorage Web API
